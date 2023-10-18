@@ -1,10 +1,16 @@
 import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+
 import './App.scss'
 
 function App() {
   return (
     <div className='App'>
-      <p>Hello World</p>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<div>Hello world!</div>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
