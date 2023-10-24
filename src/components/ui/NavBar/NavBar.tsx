@@ -2,15 +2,14 @@ import { Link, useNavigate } from 'react-router-dom'
 
 import { signOut } from 'firebase/auth'
 
-import { useAppDispatch, useAppSelector } from '../../../app/hooks/redux-hooks'
+import { useAppDispatch, useAppSelector, useAuth } from '@hooks'
+import { authSelectors } from '@store'
+import { removeUser } from '@store/slices/userSlice'
 
 import { auth } from '../../../../firebase'
-import { useAuth } from '../../../app/hooks/use-auth'
-import { authSelectors } from '../../../store'
-import { removeUser } from '../../../store/slices/userSlice'
-import Preloader from '../../Preloader/Preloader'
+import { Preloader } from '../Preloader'
 
-const NavBar = () => {
+export const NavBar = () => {
   const dispatch = useAppDispatch()
   const navigate = useNavigate()
   const { isAuth, email } = useAuth()
@@ -34,17 +33,15 @@ const NavBar = () => {
     <nav>
       {isAuth ? (
         <>
-          <Link to='/favorites'> Избранное </Link>
+          <Link to='/favorites'>Favorites</Link>
           <button onClick={() => handleLogout()}>Log out from {email}</button>
         </>
       ) : (
         <>
-          <Link to='/login'>Войти</Link>
-          <Link to='/login'>Регистрация</Link>
+          <Link to='/login'>Login</Link>
+          <Link to='/register'>Register</Link>
         </>
       )}
     </nav>
   )
 }
-
-export default NavBar

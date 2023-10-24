@@ -1,7 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom'
 
-import { SignUp } from './SignUp/SignUp'
-import { useAuth } from '../../app/hooks'
+import { useAuth } from '@hooks'
+
+import { SignUp } from './SignUp'
 
 const RegisterPage = () => {
   const { isAuth } = useAuth()
@@ -22,4 +23,4 @@ const RegisterPage = () => {
   )
 }
 
-export default RegisterPage
+export { RegisterPage }

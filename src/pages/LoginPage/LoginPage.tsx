@@ -1,7 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom'
 
-import { Login } from './Login/Login'
-import { useAuth } from '../../app/hooks'
+import { useAuth } from '@hooks'
+
+import { Login } from './Login'
 
 const LoginPage = () => {
   const { isAuth } = useAuth()
@@ -22,4 +23,4 @@ const LoginPage = () => {
   )
 }
 
-export default LoginPage
+export { LoginPage }
