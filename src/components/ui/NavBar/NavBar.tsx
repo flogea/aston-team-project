@@ -40,6 +40,9 @@ export const NavBar = () => {
           <NavLink to='/favorites' className={handleActiveLink}>
             Favorites
           </NavLink>
+          <NavLink to='/history' className={handleActiveLink}>
+            History
+          </NavLink>
           <button onClick={() => handleLogout()} className={styles.logoutBtn}>
             Log out from <span>{email}</span>
           </button>

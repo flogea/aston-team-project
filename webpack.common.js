@@ -61,7 +61,7 @@ const getRules = () => {
       },
     },
     {
-      test: /\.(ttf|woff(2)?)$/,
+      test: /\.(woff(2)?)$/,
       type: 'asset/resource',
       exclude: /node_modules/,
       generator: {

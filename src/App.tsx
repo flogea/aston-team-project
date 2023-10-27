@@ -9,6 +9,7 @@ import {
   HomePage,
   LoginPage,
   RegisterPage,
+  HistoryPage,
 } from '@pages'
 import { checkAuth } from '@store/actions/authAction'
 import { Layout } from '@components'
@@ -28,6 +29,7 @@ function App() {
         <Route path='/register' element={<RegisterPage />} />
         <Route path='/card' element={<CardInfoPage />} />
         <Route path='/favorites' element={<FavoritesPage />} />
+        <Route path='/history' element={<HistoryPage />} />
       </Routes>
     </Layout>
   )
