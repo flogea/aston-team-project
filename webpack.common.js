@@ -61,7 +61,7 @@ const getRules = () => {
       },
     },
     {
-      test: /\.(woff(2)?)$/,
+      test: /\.(woff(2)?|ttf)$/,
       type: 'asset/resource',
       exclude: /node_modules/,
       generator: {
@@ -86,7 +86,7 @@ module.exports = {
     filename: 'js/[chunkhash].js',
     path: PATHS.dist,
     clean: true,
-    publicPath: '/',
+    // publicPath: '/',
   },
   plugins: getPlugins(),
   module: {
