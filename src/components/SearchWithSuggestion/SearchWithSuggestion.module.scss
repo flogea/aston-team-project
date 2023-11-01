@@ -1,0 +1,11 @@
+.section {
+  position: relative;
+
+  div[id='bar'] {
+    position: absolute;
+    top: 100%;
+    margin-top: 3px;
+    z-index: 2;
+    user-select: none;
+  }
+}

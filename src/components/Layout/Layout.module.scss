@@ -1,0 +1,16 @@
+@import '@assets/scss/mixins';
+
+.page {
+  @include dynamic-paddings;
+  margin: 0 auto;
+  max-width: var(--max-width);
+  min-width: var(--min-width);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+  margin-top: 8.5rem;
+}
