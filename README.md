@@ -13,7 +13,7 @@
 ---
 ---
 
-### [Deploy on gh-pages](https://tatty13.github.io/aston-team-project/)
+### [Deploy on gh-pages](https://flogea.github.io/aston-team-project/)
 
 ---
 ---
